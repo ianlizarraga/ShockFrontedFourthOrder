@@ -53,14 +53,14 @@ Output: discretized 4-dimensional shock-fronted travelling wave for eps > 0
 
 
 
--- nonlocalriccatievans.m
+-- riccatievanscomplexdshapde_paper.m
 
 Requires output from interpolreg_bvp_shock.m (i.e. discretized shockwave in 4D)
 
 Output: Riccati-Evans function relative to chart T (see Sec. 4 in paper) along contour described in Fig. 4
 
 
--- interpolriccatievans_paper.nb
+-- nonlocalriccatievans.nb
 
 Requires ToMatlab.m to be executed
 
