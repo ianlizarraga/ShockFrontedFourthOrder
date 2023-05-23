@@ -53,7 +53,7 @@ Output: discretized 4-dimensional shock-fronted travelling wave for eps > 0
 
 
 
--- riccatievansinterpol.m
+-- nonlocalriccatievans.m
 
 Requires output from interpolreg_bvp_shock.m (i.e. discretized shockwave in 4D)
 
