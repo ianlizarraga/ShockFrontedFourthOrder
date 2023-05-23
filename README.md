@@ -51,8 +51,6 @@ Requires reducedwave.mat (data for reduced singular heteroclinic orbit)
 Output: discretized 4-dimensional shock-fronted travelling wave for eps > 0
 
 
-
-
 -- riccatievanscomplexdshapde_paper.m
 
 Requires output from interpolreg_bvp_shock.m (i.e. discretized shockwave in 4D)
@@ -66,3 +64,15 @@ Requires ToMatlab.m to be executed
 
 Output: Symbolic calculations of the matrix Riccati equations relative to chart T (see Sec. 4 in paper)
 
+
+-- fastevansnonlocal.m
+
+Requires output from interpolreg_bvp_shock.m (i.e. discretized shockwave in 4D)
+
+Output: computation of the fast reduced Evans function (see Sec. 5 in paper)
+
+-- bvpnlproj2.m
+
+Requires reduceddata3.mat (singular heteroclinic data with reduced eigenvalue problem trajectory for lambda = 100)
+
+Output: Uses a BVP solver to check slow unstable-to-unstable connections (Fig. 8 in paper)
