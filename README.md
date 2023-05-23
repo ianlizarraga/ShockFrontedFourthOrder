@@ -7,12 +7,13 @@ README
 
 …/ShockFrontedFourthOrder
 
+Code used in "Nonlinear Stability of Shock-Fronted Travelling Waves in Reaction-Nonlinear Diffusion Equations," I. Lizarraga and R. Marangell (2023)
 
 
 
 File types:
 
-*.m  -  MATLAB notebooks
+*.m  -  MATLAB notebooks (EXCEPT FOR ToMatlab.m which is an executable in Mathematica)
 *.mat - MATLAB data arrays
 *.nb - Mathematica notebooks
 *.cpp - C++ code used with MATLAB implementation of DOP853 ODE solver
@@ -32,7 +33,7 @@ See e.g. http://www.unige.ch/~hairer/software.html. But these parts are easily m
 
 
   
-File descriptions and dependencies:
+Executable file descriptions and dependencies:
 
 -- interpolredyifei.m 
 
@@ -40,15 +41,28 @@ Requires delwhcparams2.mat and delparams3.mat (parameter values at which singula
 
 Requires interpred2.cpp to integrate two-dimensional reduced problem
 
-Output: reducedwave.mat, coordinates for reduced singular heteroclinic for equal area rule shock-fronted travelling waves
+Output: reducedwave.mat, coordinates for discretized  reduced singular heteroclinic for equal area rule shock-fronted travelling waves
 
 
 -- interpolreg_bvp_shock.m
 
 Requires reducedwave.mat (data for reduced singular heteroclinic orbit)
 
-Output: 4-dimensional shock-fronted travelling wave for eps > 0
+Output: discretized 4-dimensional shock-fronted travelling wave for eps > 0
 
 
 
+
+-- riccatievansinterpol.m
+
+Requires output from interpolreg_bvp_shock.m (i.e. discretized shockwave in 4D)
+
+Output: Riccati-Evans function relative to chart T (see Sec. 4 in paper) along contour described in Fig. 4
+
+
+-- interpolriccatievans_paper.nb
+
+Requires ToMatlab.m to be executed
+
+Output: Symbolic calculations of the matrix Riccati equations relative to chart T (see Sec. 4 in paper)
 
